@@ -9,7 +9,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
-    <!-- Calculator Display -->
     <TextView
         android:id="@+id/display_text_view"
         android:layout_width="0dp"
@@ -29,7 +28,6 @@
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="123456789.0123" />
 
-    <!-- Button Grid -->
     <GridLayout
         android:id="@+id/button_grid_layout"
         android:layout_width="0dp"
@@ -43,7 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/display_text_view">
 
-        <!-- Row 1 -->
         <Button style="@style/CalculatorButton.Operation"
             android:id="@+id/button_clear"
             android:text="@string/button_clear" />
@@ -57,7 +54,6 @@
             android:id="@+id/button_divide"
             android:text="@string/button_divide" />
 
-        <!-- Row 2 -->
         <Button style="@style/CalculatorButton.Number"
             android:id="@+id/button_7"
             android:text="@string/button_7" />
@@ -71,7 +67,6 @@
             android:id="@+id/button_multiply"
             android:text="@string/button_multiply" />
 
-        <!-- Row 3 -->
         <Button style="@style/CalculatorButton.Number"
             android:id="@+id/button_4"
             android:text="@string/button_4" />
@@ -85,7 +80,7 @@
             android:id="@+id/button_subtract"
             android:text="@string/button_subtract" />
 
-        <!-- Row 4 -->
+       
         <Button style="@style/CalculatorButton.Number"
             android:id="@+id/button_1"
             android:text="@string/button_1" />
@@ -99,7 +94,7 @@
             android:id="@+id="button_add"
             android:text="@string/button_add" />
 
-        <!-- Row 5 -->
+       
         <Button style="@style/CalculatorButton.Number"
             android:id="@+id/button_0"
             android:layout_columnSpan="2"
