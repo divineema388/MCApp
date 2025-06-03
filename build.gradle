@@ -2,10 +2,10 @@
 buildscript {
     ext {
         // Define common versions for libraries
-        gradle_version = '7.0.4' // Using 7.0.4 as it's a stable choice compatible with Java 11 and recent Gradle versions.
-                                // For Gradle 7.3, AGP 7.0.x is a good fit.
+        // Android Gradle Plugin version - UPDATE THIS!
+        gradle_version = '7.4.2' // <-- CHANGE THIS LINE
         // Kotlin version (even if not using Kotlin, some AndroidX libs might depend on it)
-        kotlin_version = '1.5.20' // A common and stable version
+        kotlin_version = '1.5.20' // This is fine for now
     }
     repositories {
         google()
@@ -14,22 +14,15 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
-// THIS IS THE MISSING BLOCK!
 allprojects {
     repositories {
         google()
         mavenCentral()
-        // If you encounter very old libraries, you might also need jcenter() here,
-        // but for modern AndroidX and Material libraries, google() and mavenCentral() are sufficient.
     }
 }
-
 
 task clean(type: Delete) {
     delete rootProject.buildDir
