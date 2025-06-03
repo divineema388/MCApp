@@ -1,0 +1,26 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        // Define common versions for libraries
+        // Android Gradle Plugin version
+        gradle_version = '7.0.4' // Using 7.0.4 as it's a stable choice compatible with Java 11 and recent Gradle versions.
+                                // For Gradle 7.3, AGP 7.0.x is a good fit.
+        // Kotlin version (even if not using Kotlin, some AndroidX libs might depend on it)
+        kotlin_version = '1.5.20' // A common and stable version
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

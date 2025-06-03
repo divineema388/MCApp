@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android' // Although we're using Java, this is often required by newer AndroidX libs.
+}
+
+android {
+    compileSdk 33 // Compile against Android 13 (API 33) for modern features
+
+    defaultConfig {
+        applicationId "com.calc.mui" // Your package name
+        minSdk 21 // Minimum Android version supported (Lollipop)
+        targetSdk 33 // Target Android 13
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8 // Use Java 8 features
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // Added for Kotlin plugin, even if using Java, it helps with some AndroidX dependencies
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    namespace 'com.calc.mui' // Added for recent AGP versions
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Latest stable Appcompat
+    implementation 'com.google.android.material:material:1.8.0' // Latest stable Material Design
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Latest stable ConstraintLayout
+    implementation 'androidx.navigation:navigation-fragment:2.5.3' // For navigation drawer setup
+    implementation 'androidx.navigation:navigation-ui:2.5.3' // For navigation drawer setup
+
+    // Lifecycle components (often pulled in by navigation, but good to be explicit if needed)
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

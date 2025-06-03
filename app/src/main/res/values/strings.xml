@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalculatorApp</string>
+
+    <!-- Navigation Drawer Strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string> <!-- Placeholder, not implemented -->
+
+    <!-- Navigation Drawer Menu Items -->
+    <string name="menu_home">Calculator</string>
+    <string name="menu_source_code">Source Code</string>
+    <string name="menu_developed_by">Developed By</string>
+
+    <!-- Developer Info -->
+    <string name="dev_name">Dev divineema388</string>
+    <string name="dev_github_url">https://github.com/divineema388</string>
+
+    <!-- Calculator Button Labels -->
+    <string name="button_clear">C</string>
+    <string name="button_plus_minus">+/-</string>
+    <string name="button_percentage">%</string>
+    <string name="button_divide">÷</string>
+    <string name="button_multiply">×</string>
+    <string name="button_subtract">−</string>
+    <string name="button_add">+</string>
+    <string name="button_equals">=</string>
+    <string name="button_dot">.</string>
+
+    <string name="button_0">0</string>
+    <string name="button_1">1</string>
+    <string name="button_2">2</string>
+    <string name="button_3">3</string>
+    <string name="button_4">4</string>
+    <string name="button_5">5</string>
+    <string name="button_6">6</string>
+    <string name="button_7">7</string>
+    <string name="button_8">8</string>
+    <string name="button_9">9</string>
+
+    <!-- Content Descriptions (for accessibility) -->
+    <string name="desc_calculator_display">Calculator display showing current input or result</string>
+    <string name="desc_navigation_header_image">Navigation header image</string>
+
+</resources>
