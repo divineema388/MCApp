@@ -80,7 +80,6 @@
             android:id="@+id/button_subtract"
             android:text="@string/button_subtract" />
 
-       
         <Button style="@style/CalculatorButton.Number"
             android:id="@+id/button_1"
             android:text="@string/button_1" />
@@ -88,13 +87,12 @@
             android:id="@+id/button_2"
             android:text="@string/button_2" />
         <Button style="@style/CalculatorButton.Number"
-            android:id="@+id="button_3"
+            android:id="@+id/button_3"
             android:text="@string/button_3" />
         <Button style="@style/CalculatorButton.Accent"
-            android:id="@+id="button_add"
+            android:id="@+id/button_add"  
             android:text="@string/button_add" />
 
-       
         <Button style="@style/CalculatorButton.Number"
             android:id="@+id/button_0"
             android:layout_columnSpan="2"
