@@ -2,7 +2,6 @@
 buildscript {
     ext {
         // Define common versions for libraries
-        // Android Gradle Plugin version
         gradle_version = '7.0.4' // Using 7.0.4 as it's a stable choice compatible with Java 11 and recent Gradle versions.
                                 // For Gradle 7.3, AGP 7.0.x is a good fit.
         // Kotlin version (even if not using Kotlin, some AndroidX libs might depend on it)
@@ -20,6 +19,17 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+
+// THIS IS THE MISSING BLOCK!
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        // If you encounter very old libraries, you might also need jcenter() here,
+        // but for modern AndroidX and Material libraries, google() and mavenCentral() are sufficient.
+    }
+}
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
