@@ -21,7 +21,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- This will include the actual calculator layout -->
     <include layout="@layout/content_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
